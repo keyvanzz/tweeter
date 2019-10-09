@@ -9,7 +9,13 @@ $(document).ready(function() {
 $(".tweet-form").on('submit', function(event) {
   event.preventDefault();
   let tweetBody = $(this).serialize();
-  console.log(tweetBody);
+  console.log($(".tweet-area").val());
+  if (!$('.tweet-area').val()) {
+    alert('Empty Tweet! :bird::rage:')
+  }
+  if ($('.tweet-area').val().length > 140) {
+    alert('YOU HAVE SAID TOO MUCH :shushing_face:')
+  }  
   $.ajax({
     method: "POST",
     url:"/tweets",
