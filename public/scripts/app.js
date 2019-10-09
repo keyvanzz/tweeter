@@ -1,3 +1,4 @@
+$(document).ready(function() {
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -33,16 +34,36 @@ const data = [
 const renderTweets = function(tweets) {
   // loops through tweets
   for (const tweet of tweets) {
-      console.log(tweet.user.name);
-  }
+    let output = createTweetElement(tweet);
+    $('.tweet-container').append(output);
+    }
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
 }
 
 const createTweetElement = function(tweet) {
-  let $tweet = $('<article>').addClass('tweet');
-  // ...
-  return $tweet;
-}
+    // let $tweet = $('<article>').addClass('tweet');
+    let $tweets = (`
+    <article class="tweet">
+    <header>
+      <img class="tweet-img" src=${tweet.user.avatars}'>
+      <h4 class= "tweet-username">${tweet.user.name}</h4>
+      <h4 class="tweet-userhandle">${tweet.user.handle}</h4>
+    </header>
+    <span class="tweet-body">${tweet.content.text}</span>
+    <footer class="tweet-footer">
+      <h4 class="tweet-timestamp">${tweet.created_at}</h4>
+      <div class="tweet-icons">
+        <i class="fa fa-flag"></i>
+        <i class="fa fa-heart"></i>
+        <i class="fa fa-refresh"></i>
+      </div>
+    </footer>
+  </article>
+  `);
+    return $tweets;
+  };
 
 renderTweets(data);
+//console.log(renderTweets(data))
+});
