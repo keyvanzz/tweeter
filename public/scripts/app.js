@@ -31,14 +31,40 @@ const data = [
     }
   ]
 
+const loadTeewts = () => {
+  $.get("/tweets", function(res) {
+    renderTweets(res);
+  })
+}
+  
+$(".tweet-form").on('submit', function(event) {
+  event.preventDefault();
+  let tweetBody = $(this).serialize();
+  console.log(tweetBody);
+  $.ajax({
+    method: "POST",
+    url:"/tweets",
+    data: tweetBody
+  })
+  .then(loadTeewts());
+});
+
+const updateTweet = (tweets) => {
+  // $('.tweet-img').attr('src', tweet.user.avatars);
+  // $('.tweet-username').text('src', tweet.user.name);
+  // $('.tweet-userhandle').text('src', tweet.user.handle);
+  // $('.tweet-body').text('src', tweet.content.text);
+  // $('.tweet-timestamp').text('src', tweet.created_at);
+}
 const renderTweets = function(tweets) {
   // loops through tweets
+  // calls createTweetElement for each tweet
+  // takes return value and appends it to the tweets container
+  $(".tweet-container").empty();
   for (const tweet of tweets) {
     let output = createTweetElement(tweet);
     $('.tweet-container').append(output);
     }
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
 }
 
 const createTweetElement = function(tweet) {

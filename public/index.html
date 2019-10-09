@@ -23,6 +23,20 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+    $(function() {
+    const $button = $('#load-more-posts');
+    $button.on('click', function () {
+        console.log('Button clicked, performing ajax call...');
+        $.ajax('more-posts.html', { method: 'GET' })
+        .then(function (morePostsHtml) {
+        console.log('Success: ', morePostsHtml);
+        $button.replaceWith(morePostsHtml);
+        });
+    });
+    });
+    </script>
   </head>
 
   <body>
@@ -43,7 +57,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <form method="POST" action="/tweets/">
+        <form class="tweet-form" method="POST" action="/tweets">
           <textarea class="tweet-area" rows= "1" name="text" placeholder="What are you humming about?"></textarea>
           <input class="submission" type="submit" value="Tweet">
           <span class="counter">140</span>
