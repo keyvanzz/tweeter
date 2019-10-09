@@ -1,0 +1,32 @@
+.user-header {
+   background: #f59b13;
+   background-image: url("../images/asfalt-light.png");
+   height: 400px;
+   width:100%;
+}
+
+.img-container {
+    padding-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:120px;
+}
+
+.profile-pic {
+    border-radius: 2%;
+    width: 256px;
+    height:auto;
+}
+
+.h2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    margin-block-start: 0%;
+}
+
+h2 {
+    margin-block-start: 0;
+}

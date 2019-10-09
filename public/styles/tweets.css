@@ -1,0 +1,76 @@
+.tweet {
+    border: black solid 2px;
+    margin: 2% 0;
+    padding: 2% 0;
+}
+
+.tweet-img {
+    display: inline;
+    float: left;
+    width: 110px;
+    hegiht: auto;
+    margin-left: 1%;
+    border-radius: 50%;
+}
+
+.tweet-body {
+    border-bottom: 2px solid rgb(84,81,108);
+    width: 96%;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    clear: left;
+    display: block;
+    font-family: 'source sans pro', sans-serif;
+}
+
+.tweet-icons {
+    float: right;
+    display: inline-block;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+
+i {
+    width: 25px;
+}
+
+.tweet-username {
+    margin-left: 2%;
+    margin-top: 2.5%;
+    float: left;
+    font-family: "bungee Hairline"
+}
+
+.tweet-userhandle {
+    float: right;
+    margin-top: 2.5%;
+    padding-right:2%;
+    opacity: 0;
+    font-family: 'bungee Hairline', cursive;
+}
+.tweet-timestamp {
+    margin-left: 2%;
+    margin-bottom: 0;
+    font-size: medium;
+    display: inline-block;
+}
+
+.tweet:hover {
+    box-shadow: 5px 5px 5px #888;
+}
+
+.tweet:hover .tweet-body {
+    font-weight: bold;
+}
+
+.tweet:hover .tweet-username {
+    font-family: 'bungee', 'cursive';
+}
+
+.tweet:hover .tweet-userhandle {
+    opacity: 100;
+}
