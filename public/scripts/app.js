@@ -6,12 +6,6 @@ $(document).ready(function() {
  */
 
 // Fake data taken from initial-tweets.json
-const loadTeewts = () => {
-  $.get("/tweets", function(res) {
-    renderTweets(res);
-  })
-}
-  
 $(".tweet-form").on('submit', function(event) {
   event.preventDefault();
   let tweetBody = $(this).serialize();
@@ -21,10 +15,19 @@ $(".tweet-form").on('submit', function(event) {
     url:"/tweets",
     data: tweetBody
   })
-  .then(loadTeewts());
+  .then(loadTeewts);
 });
 
-const renderTweets = (tweets) => {
+const loadTeewts = () => {
+  $.get("/tweets", function(res) {
+    renderTweets(res);
+  })
+}
+
+const renderTweets = function(tweets) {
+  // loops through tweets
+  // calls createTweetElement for each tweet
+  // takes return value and appends it to the tweets container
   $(".tweet-container").empty();
   for (const tweet of tweets) {
     let output = createTweetElement(tweet);
@@ -55,3 +58,6 @@ const createTweetElement = function(tweet) {
 `);
   return $tweets;
 };
+
+// renderTweets(data);
+});
