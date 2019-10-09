@@ -32,6 +32,9 @@ const data = [
 
 const renderTweets = function(tweets) {
   // loops through tweets
+  for (const tweet of tweets) {
+      console.log(tweet.user.name);
+  }
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
 }
