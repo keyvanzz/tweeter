@@ -13,6 +13,28 @@ nav {
     position: fixed;
 }
 
+@keyframes bounce {
+    0%   { transform: translateY(-5px) }
+    25%   { transform: translateY(0) }
+    50%   { transform: translateY(5px) }
+    50%   { transform: translateY(0px) }
+    100% { transform: translateY(-5px) }
+}
+#nav-icon {
+  animation: bounce 1.5s infinite;
+}
+
+.nav-button {
+    background: inherit;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+}
+
+.nav-button span {
+    font-weight: 700;
+}
+
 .logo {
     font-family: 'Bungee', cursive;
 }

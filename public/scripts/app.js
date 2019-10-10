@@ -41,6 +41,11 @@ const renderTweets = function(tweets) {
     }
 }
 
+const escape =  function(str) {
+  let div = $("<div>").text(str);
+  return div[0].innerHTML;
+}
+
 const createTweetElement = function(tweet) {
   let data = new Date(tweet.created_at).toDateString();
   // let $tweet = $('<article>').addClass('tweet');
@@ -51,7 +56,7 @@ const createTweetElement = function(tweet) {
     <h4 class= "tweet-username">${tweet.user.name}</h4>
     <h4 class="tweet-userhandle">${tweet.user.handle}</h4>
   </header>
-  <span class="tweet-body">${tweet.content.text}</span>
+  <span class="tweet-body">${escape(tweet.content.text)}</span>
   <footer class="tweet-footer">
     <h4 class="tweet-timestamp">${data}</h4>
     <div class="tweet-icons">
@@ -65,5 +70,9 @@ const createTweetElement = function(tweet) {
   return $tweets;
 };
 
-// renderTweets(data);
+$('.nav-button').click( () => {
+  $('.new-tweet').slideToggle('slow');
+  $('.tweet-area').focus();
+});
+
 });
