@@ -11,10 +11,10 @@ $(".tweet-form").on('submit', function(event) {
   let tweetBody = $(this).serialize();
   console.log($(".tweet-area").val());
   if (!$('.tweet-area').val()) {
-    $('#error-message').html('&#9888; Empty Tweet! please enter some chars to tweet. &#9888;').show();
+    $('#error-message').html('&#9888; Empty Tweet! please enter some chars to tweet. &#9888;').show().delay(1000).fadeOut();
   }
   if ($('.tweet-area').val().length > 140) {
-    $('#error-message').html('&#9888; Too long! please respect our orbitary limit of 140 chars. &#9888;').show();
+    $('#error-message').html('&#9888; Too long! please respect our orbitary limit of 140 chars. &#9888;').show().delay(1000).fadeOut();;
   } else {
     $.ajax({
       method: "POST",
