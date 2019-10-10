@@ -27,3 +27,10 @@ textarea {
     color: black;
     font-weight: 700;
   }
+
+#error-message {
+    color: red;
+    display: none;
+    border: red solid 3px;
+    text-align: center;
+}

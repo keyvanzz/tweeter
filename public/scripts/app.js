@@ -11,17 +11,19 @@ $(".tweet-form").on('submit', function(event) {
   let tweetBody = $(this).serialize();
   console.log($(".tweet-area").val());
   if (!$('.tweet-area').val()) {
-    alert('Empty Tweet! :bird::rage:')
+    $('#error-message').html('&#9888; Empty Tweet! please enter some chars to tweet. &#9888;').show();
   }
   if ($('.tweet-area').val().length > 140) {
-    alert('YOU HAVE SAID TOO MUCH :shushing_face:')
-  }  
-  $.ajax({
-    method: "POST",
-    url:"/tweets",
-    data: tweetBody
-  })
-  .then(loadTeewts);
+    $('#error-message').html('&#9888; Too long! please respect our orbitary limit of 140 chars. &#9888;').show();
+  } else {
+    $.ajax({
+      method: "POST",
+      url:"/tweets",
+      data: tweetBody
+    })
+    .then(loadTeewts); 
+  }
+
 });
 
 const loadTeewts = () => {

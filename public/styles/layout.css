@@ -22,6 +22,7 @@ body {
 }
 
 .container {
+  overflow-wrap: break-word;
   width: 90%;
   margin: auto;
   color: #545149;
