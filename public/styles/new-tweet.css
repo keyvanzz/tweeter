@@ -28,9 +28,14 @@ textarea {
     font-weight: 700;
   }
 
+#error-message-container {
+    text-align: center;
+    margin-top: 30px;;
+}  
+
 #error-message {
     color: red;
     display: none;
     border: red solid 3px;
-    text-align: center;
+    alig
 }
