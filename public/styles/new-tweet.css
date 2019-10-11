@@ -3,7 +3,6 @@
     margin-bottom: 2%;
 }
 
-
 textarea {
     background: transparent;
     border: 0px solid;
@@ -33,9 +32,6 @@ textarea {
 
 #error-message-container {
     text-align: center;
-}  
-
-#error-message {
     color: red;
     display: none;
     border: red solid 3px;
