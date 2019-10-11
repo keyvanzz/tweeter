@@ -19,3 +19,12 @@ This repository is the starter code for the project: Students will fork and clon
 ## Features
 
 Hover over tweets to enable a shadowbox display, showing the users handle and icons in the footer. -Works in both tablet and desktop format -Randomly generated Tweeter user names and handles for new tweets.
+
+## Screenshots
+
+![Screenshot of desktopSize-newTweets-error1](https://github.com/keyvanzz/tweeter/blob/master/docs/desktopSize-newTweets-error1.jpg)
+![Screenshot of desktopSize-newTweets-error2](https://github.com/keyvanzz/tweeter/blob/master/docs/desktopSize-newTweets-error2.jpg)
+![Screenshot of desktopSize-newTweets](https://github.com/keyvanzz/tweeter/blob/master/docs/desktopSize-newTweets.jpg)
+![Screenshot of desktopSize-tweetBox](https://github.com/keyvanzz/tweeter/blob/master/docs/desktopSize-tweetBox.jpg)
+![Screenshot of mobileSize-newTweets](https://github.com/keyvanzz/tweeter/blob/master/docs/mobileSize-newTweets.jpg)
+![Screenshot of mobileSize-tweetBox](https://github.com/keyvanzz/tweeter/blob/master/docs/mobileSize-tweetBox.jpg)
