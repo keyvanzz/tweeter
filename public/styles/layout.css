@@ -3,6 +3,12 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+:root {
+  --nav-bar-height: 120px;
+}
+
+
+
 html {
   box-sizing: border-box;
 }
@@ -16,6 +22,7 @@ html {
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -23,8 +30,64 @@ body {
 
 .container {
   overflow-wrap: break-word;
-  width: 90%;
-  margin: auto;
+  overflow: hidden;
   color: #545149;
-  overflow: auto;
+}
+
+@media only screen and (min-width: 1024px) {
+
+  body {
+    display: flex;
+    margin-top: var(--nav-bar-height);
+  }
+
+  header {
+    flex-grow: 4;
+    margin: 5rem 5rem 5rem 3rem;
+    padding: 0 5rem;
+    align-self: flex-start;
+  }
+
+  main {
+    flex-grow: 6;
+    margin: 5rem 3rem 5rem 5rem;    
+  }
+
+  nav {
+    height: var(--nav-bar-height);
+    width: 100%;
+    z-index: 1;
+    background: #4056A1;
+    color: #FFFFFF;
+    top: 0;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    position: fixed;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  nav {
+    
+    height: var(--nav-bar-height);
+    width: 100%;
+    z-index: 1;
+    background: #f59b13;
+    background-image: url("../images/asfalt-light.png");
+    color: #FFFFFF;
+    top: 0;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    position: fixed;
+  }
+
+  .user-header {
+    margin-bottom: 2%;
+  }
 }
