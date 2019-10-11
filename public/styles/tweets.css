@@ -5,10 +5,8 @@
 }
 
 .tweet-img {
-    display: inline;
     float: left;
     width: 110px;
-    hegiht: auto;
     margin-left: 1%;
     border-radius: 50%;
 }
@@ -29,7 +27,6 @@
 
 .tweet-icons {
     float: right;
-    display: inline-block;
     margin-top: 2%;
     margin-right: 2%;
 }

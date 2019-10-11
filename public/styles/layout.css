@@ -48,6 +48,13 @@ body {
     align-self: flex-start;
   }
 
+  .tweet-header {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0;
+  }
+
   main {
     flex-grow: 6;
     margin: 5rem 3rem 5rem 5rem;    
@@ -70,8 +77,8 @@ body {
 }
 
 @media only screen and (max-width: 1023px) {
-  nav {
-    
+  
+  nav {  
     height: var(--nav-bar-height);
     width: 100%;
     z-index: 1;
