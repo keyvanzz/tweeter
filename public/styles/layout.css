@@ -41,18 +41,18 @@ body {
     margin-top: var(--nav-bar-height);
   }
 
-  header {
+  header.user-header {
     flex-grow: 4;
     margin: 5rem 5rem 5rem 3rem;
     padding: 0 5rem;
     align-self: flex-start;
   }
 
-  .tweet-header {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0 0;
+  article.tweet header {
+    flex-grow: 4;
+    margin: 0 0 5rem 0;
+    padding: 0;
+    align-self: flex-start;
   }
 
   main {

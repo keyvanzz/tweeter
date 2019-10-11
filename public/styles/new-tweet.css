@@ -39,4 +39,5 @@ textarea {
     color: red;
     display: none;
     border: red solid 3px;
+    width: 100%;
 }
