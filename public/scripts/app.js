@@ -53,7 +53,7 @@ const createTweetElement = function(tweet) {
   // let $tweet = $('<article>').addClass('tweet');
   let $tweets = (`
   <article class="tweet">
-  <header>
+  <header class="tweet-header">
     <img class="tweet-img" src=${tweet.user.avatars}'>
     <h4 class= "tweet-username">${tweet.user.name}</h4>
     <h4 class="tweet-userhandle">${tweet.user.handle}</h4>
