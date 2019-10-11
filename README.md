@@ -23,8 +23,13 @@ Hover over tweets to enable a shadowbox display, showing the users handle and ic
 ## Screenshots
 
 ![Screenshot of desktopSize-newTweets-error1](https://github.com/keyvanzz/tweeter/blob/master/docs/desktopSize-newTweets-error1.jpg)
+
 ![Screenshot of desktopSize-newTweets-error2](https://github.com/keyvanzz/tweeter/blob/master/docs/desktopSize-newTweets-error2.jpg)
-![Screenshot of desktopSize-newTweets](https://github.com/keyvanzz/tweeter/blob/master/docs/desktopSize-newTweets.jpg)
-![Screenshot of desktopSize-tweetBox](https://github.com/keyvanzz/tweeter/blob/master/docs/desktopSize-tweetBox.jpg)
-![Screenshot of mobileSize-newTweets](https://github.com/keyvanzz/tweeter/blob/master/docs/mobileSize-newTweets.jpg)
+
 ![Screenshot of mobileSize-tweetBox](https://github.com/keyvanzz/tweeter/blob/master/docs/mobileSize-tweetBox.jpg)
+
+![Screenshot of desktopSize-tweetBox](https://github.com/keyvanzz/tweeter/blob/master/docs/desktopSize-tweetBox.jpg)
+
+![Screenshot of mobileSize-newTweets](https://github.com/keyvanzz/tweeter/blob/master/docs/mobileSize-newTweets.jpg)
+
+![Screenshot of desktopSize-newTweets](https://github.com/keyvanzz/tweeter/blob/master/docs/desktopSize-newTweets.jpg)
