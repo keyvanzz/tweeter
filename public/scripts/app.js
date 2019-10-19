@@ -49,7 +49,7 @@ const escape =  function(str) {
 }
 
 const createTweetElement = function(tweet) {
-  let data = new Date(tweet.created_at).toDateString();
+  let date = new Date(tweet.created_at).toDateString();
   // let $tweet = $('<article>').addClass('tweet');
   let $tweets = (`
   <article class="tweet">
@@ -60,7 +60,7 @@ const createTweetElement = function(tweet) {
   </header>
   <span class="tweet-body">${escape(tweet.content.text)}</span>
   <footer class="tweet-footer">
-    <h4 class="tweet-timestamp">${data}</h4>
+    <h4 class="tweet-timestamp">${date}</h4>
     <div class="tweet-icons">
       <i class="fa fa-flag"></i>
       <i class="fa fa-heart"></i>
